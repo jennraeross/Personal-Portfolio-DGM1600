@@ -2,14 +2,36 @@ doctype
 html(lang='en')
     head
         meta(charset='utf-8')
-        //link(href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css')
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap")
         link(rel="stylesheet" href="css/main.css")
         title DGM1600 Personal Project Page
     body
+        nav.nav#navbar
+            ul
+                li #[a(href="#welcome-section") Welcome]
+                li #[a(href="#projects") Projects]
         header
-            #navbar
-                button#welcome-button Welcome
-                button#projects-button Projects
         main
+            section#welcome-section
+                #welcome-content
+                    #welcome-left
+                        h1 My name is Jennifer Roylance #^-^#
+                        .container
+                            h3 I'm a budding web developer and an avid reader
+                            h3 よろしくお願いします!
+                            h4 Check out my projects #[a#profile-link(href="https://github.com/jennraeross" target="_blank") at GitHub]!
+                    #welcome-right
+                        img(src="http://www.jennroylance.com/img/IMG_0214.JPG")
+            section#projects
+                h2 My Projects
+                .project-tile
+                    img(src="http://www.jennroylance.com/img/homepage.png")
+                    dl
+                        dt
+                            a(href="https://www.jennroylance.com" target="_blank") My Homepage
+                        dd
+                            p This is still (very much) a work in progress. Please do not look at it.
+
         footer
-        
+            span &copy;2020 - Jennifer Roylance
+        script(src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js")

@@ -1,20 +1,104 @@
 @import nord.sass
+@import fall.sass
 
 body
-    background-color: $dark-2
+    background-color: $fall-neutral
     color: $light-1
     margin: 0
     padding: 0
     font-family: "Raleway", 'Helvetica', sans-serif
+a:visited, a 
+    color: $fall-pumpkin
 #navbar
-    background-color: $dark-3
+    background-color: $fall-red-2
     width: 100%
-    height: 3.5em
+    //height: 3.5em
     border-bottom: 1px solid $dark-1
-    button
-        background-color: $dark-3
-        color: $light-1
-        height: 100%
-        border-radius: 0
-        border: none
-        border-right: 1px solid $dark-1
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    margin: 0
+    ul
+        display: flex
+        justify-content: flex-end
+        li
+            display: inline
+            //margin-left: 1em
+            margin-right: 1em
+            height: 100%
+            a 
+                border: 1px solid $dark-1
+                padding: .75em
+                border-radius: 5px
+                text-decoration: none
+                background-color: $fall-pumpkin
+                color: $dark-1
+            a:hover
+                background-color: $fall-orange
+                color: $light-1
+#welcome-section
+    background-color: $fall-red
+    width: 100%
+    height: 100vh
+    //padding: 3.5em
+    margin: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+#welcome-content
+    display: flex
+    justify-content: space-between
+    max-width: 800px
+    padding: 1em
+#welcome-right
+    margin-left: 2em
+    img 
+        max-height: 15em
+#projects
+    background-color: $fall-neutral
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    h2 
+        margin-left: 2em
+.project-tile
+    background-color: $fall-red
+    margin: 2em
+    padding: 1.5em
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75)
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75)
+    display: flex
+    justify-content: space-between
+    max-width: 800px
+    align-items: center
+    img
+        max-height: 10em
+        max-width: 10em
+        margin-right: 2em
+footer 
+    display: flex
+    justify-content: flex-end
+    padding: 1em
+
+@media only screen and (max-width: 600px)
+    #navbar
+        ul 
+            flex-direction: column
+            justify-content: space-around
+            li 
+                margin-top: 1em
+                margin-bottom: 1em
+                a 
+                    width: 100%
+    #welcome-content
+        flex-direction: column
+        justify-content: flex-start
+        .welcome-right
+            margin-left: 0
+    .project-tile
+        flex-direction: column
+        justify-content: center
