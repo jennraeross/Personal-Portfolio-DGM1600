@@ -1,0 +1,39 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/main.css")
+        link(rel="stylesheet" href="css/swapi.css")
+        title Star Wars API Demo
+    body
+        nav.nav#navbar
+            button.button#films-button.active Films
+            button.button#people-button People
+            button.button#planets-button Planets
+            button.button#species-button Species
+            button.button#starships-button Starships
+            button.button#vehicles-button Vehicles
+        main
+            #divider
+            h1 Star Wars API Demo
+            #wiki-films.wiki
+                h2 Films
+            #wiki-people.wiki.hidden
+                h2 People
+            #wiki-planets.wiki.hidden
+                h2 Planets
+            #wiki-species.wiki.hidden
+                h2 Species
+            #wiki-starships.wiki.hidden
+                h2 Starships
+            #wiki-vehicles.wiki.hidden
+                h2 Vehicles
+        footer
+    script(type="module" src="swapi/films.js")
+    script(type="module" src="swapi/people.js")
+    script(type="module" src="swapi/planets.js")
+    script(type="module" src="swapi/species.js")
+    script(type="module" src="swapi/starships.js")
+    script(type="module" src="swapi/vehicles.js")
+    script(type="module" src="js/swapi.js")

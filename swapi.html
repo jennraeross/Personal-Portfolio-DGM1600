@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swapi.css">
+    <title>Star Wars API Demo</title>
+  </head>
+  <body>
+    <nav class="nav" id="navbar">
+      <button class="button active" id="films-button">Films</button>
+      <button class="button" id="people-button">People</button>
+      <button class="button" id="planets-button">Planets</button>
+      <button class="button" id="species-button">Species</button>
+      <button class="button" id="starships-button">Starships</button>
+      <button class="button" id="vehicles-button">Vehicles</button>
+    </nav>
+    <main>
+      <div id="divider"></div>
+      <h1>Star Wars API Demo</h1>
+      <div class="wiki" id="wiki-films">
+        <h2>Films</h2>
+      </div>
+      <div class="wiki hidden" id="wiki-people">
+        <h2>People</h2>
+      </div>
+      <div class="wiki hidden" id="wiki-planets">
+        <h2>Planets</h2>
+      </div>
+      <div class="wiki hidden" id="wiki-species">
+        <h2>Species</h2>
+      </div>
+      <div class="wiki hidden" id="wiki-starships">
+        <h2>Starships</h2>
+      </div>
+      <div class="wiki hidden" id="wiki-vehicles">
+        <h2>Vehicles</h2>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+  <script type="module" src="swapi/films.js"></script>
+  <script type="module" src="swapi/people.js"></script>
+  <script type="module" src="swapi/planets.js"></script>
+  <script type="module" src="swapi/species.js"></script>
+  <script type="module" src="swapi/starships.js"></script>
+  <script type="module" src="swapi/vehicles.js"></script>
+  <script type="module" src="js/swapi.js"></script>
+</html>
