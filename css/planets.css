@@ -1,6 +1,10 @@
 body {
   background-color: black;
+  background-image: url(/img/star-space-tile.jpg);
   color: white;
+  font-family: "Ubuntu", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 main {
@@ -12,4 +16,15 @@ main {
 
 img {
   border-radius: 50%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  padding: 2em;
+  border-bottom: 3px solid #aaa;
+  width: 100%;
 }
