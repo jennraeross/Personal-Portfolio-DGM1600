@@ -36,4 +36,5 @@ h1 {
 
 .project-tile {
   width: 80vw;
+  justify-content: space-between;
 }
