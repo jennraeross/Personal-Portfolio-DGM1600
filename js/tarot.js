@@ -1,15 +1,10 @@
-const cards = document.querySelector("#cards")
-//let url = 'https://tarot.howlcode.com/api/v1/cards';
-//let response = await fetch(url);
-//let cards = await response.json(); // read response body and parse as JSON
-//alert(commits[0].author.login);
+const cards = document.querySelector("#cards");
+
 fetch('https://tarot.howlcode.com/api/v1/cards')
     .then((response) => {
-        return response.json()
+        return response.json();
     })
     .then((data) => {
-        // Work with JSON data here
-        //console.log(data)
         data.forEach(info => {
             cards.innerHTML +=`
             <div class="card">
@@ -22,5 +17,5 @@ fetch('https://tarot.howlcode.com/api/v1/cards')
         });
     })
     .catch((err) => {
-        // Do something for an error here
+        alert('Could not retrieve tarot cards');
     })
