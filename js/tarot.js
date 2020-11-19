@@ -24,5 +24,5 @@ fetch('https://tarot.howlcode.com/api/v1/cards')
         });
     })
     .catch((err) => {
-        alert('Could not retrieve tarot cards');
+        alert("Could not retrieve tarot cards");
     })
