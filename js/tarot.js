@@ -1,5 +1,12 @@
 const cards = document.querySelector("#cards");
-
+function Card(entry) {
+    this.name = entry.name,
+    this.summary = entry.summary,
+    this.full_meaning = entry.full_meaning,
+    this.upright = entry.upright,
+    this.reversed = entry.reversed,
+    this.image = entry.image
+}
 fetch('https://tarot.howlcode.com/api/v1/cards')
     .then((response) => {
         return response.json();
