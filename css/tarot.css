@@ -81,7 +81,7 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 1em;
-  background-color: #81a1c1;
+  background-color: #5e81ac;
   color: #2e3440;
   padding: 1em;
 }
@@ -114,3 +114,5 @@ body {
     margin-bottom: 1em;
   }
 }
+
+/*# sourceMappingURL=tarot.css.map */
