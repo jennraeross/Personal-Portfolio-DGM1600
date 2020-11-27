@@ -12,7 +12,7 @@ function clearCards() {
 // Takes an array of card objects and displays them.
 function displayCards(cardsArray, type) {
     clearCards();
-    cardsArray.forEach(info => {
+    cardsArray.forEach((info) => {
         cards.innerHTML +=`
             <div class="card">
                 <div class="content">
@@ -20,7 +20,7 @@ function displayCards(cardsArray, type) {
                     <div class="back" ><h3>${info.name}</h3><p>${info.summary}</p></div>
                 </div>
             </div>
-            `
+            `;
     });
 }
 
