@@ -1,8 +1,12 @@
 // Selects the div where cards will be shown
-const cards = document.querySelector("#cards");
+const cards         = document.querySelector("#cards");
+const allButton     = document.querySelector("#allButton");
+const threeButton   = document.querySelector("#threeButton");
+const sevenButton   = document.querySelector("#sevenButton");
 
 // Array that will be filled with card objects.
 let deck = [];
+let hand = [];
 
 // Clears cards div
 function clearCards() {
@@ -10,7 +14,7 @@ function clearCards() {
 }
 
 // Takes an array of card objects and displays them.
-function displayCards(cardsArray, type) {
+function displayCards(cardsArray) {
     clearCards();
     cardsArray.forEach((info) => {
         cards.innerHTML +=`
@@ -22,6 +26,14 @@ function displayCards(cardsArray, type) {
             </div>
             `;
     });
+}
+
+function drawCards(hand, deck, number) {
+    for (var i = 0; i < number; i++) {
+        hand.push(deck[Math.floor(Math.random() * deck.length)]);
+    }
+    displayCards(hand);
+    hand = [];
 }
 
 //* Retrieves card data from API
@@ -50,4 +62,15 @@ fetchCards().then(cardsJSON => {
     deck = Object.values(cardsJSON);
     // Inserts cards into page.
     displayCards(deck);
+    threeButton.addEventListener("click", function() {
+        drawCards(hand, deck, 3);
+        hand = [];
+    });
+    sevenButton.addEventListener("click", function() {
+        drawCards(hand, deck, 7);
+        hand = [];
+    });
+    allButton.addEventListener("click", function() {
+        displayCards(deck);
+    })
 });
