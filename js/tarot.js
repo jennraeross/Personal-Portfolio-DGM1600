@@ -60,6 +60,7 @@ fetchCards().catch(error => {
 fetchCards().then(cardsJSON => {
     // Converts to array of objects
     deck = Object.values(cardsJSON);
+    console.log(deck)
     // Inserts cards into page.
     displayCards(deck);
     threeButton.addEventListener("click", function() {
@@ -74,5 +75,3 @@ fetchCards().then(cardsJSON => {
         displayCards(deck);
     })
 });
-
-console.log(deck);
