@@ -74,3 +74,5 @@ fetchCards().then(cardsJSON => {
         displayCards(deck);
     })
 });
+
+console.log(deck);
