@@ -8,6 +8,13 @@ const sevenButton   = document.querySelector("#sevenButton");
 let deck = [];
 let hand = [];
 
+// Function to flip a card
+function flipCard(id) {
+    console.log("Flip!")
+    var element = document.getElementById(`#${id}`);
+    element.classList.toggle("flip");
+}
+
 // Clears cards div
 function clearCards() {
     cards.innerHTML = "";
@@ -18,7 +25,7 @@ function displayCards(cardsArray) {
     clearCards();
     cardsArray.forEach((info) => {
         cards.innerHTML +=`
-            <div class="card">
+            <div class="card" id="${info.name}" onclick='this.classList.toggle("flip");'>
                 <div class="content">
                     <div class="front"><img src="${info.image}"/></div>
                     <div class="back" ><h3>${info.name}</h3><p>${info.summary}</p></div>
@@ -34,7 +41,7 @@ function spreadCards(cardsArray) {
         switch(Math.floor(Math.random() * 2)) {
             case 0:
                 cards.innerHTML+=`
-                <div class="card">
+                <div class="card" id="${info.id}" onclick='this.classList.toggle("flip");'>
                     <div class="content">
                         <div class="front"><img src="${info.image}"/></div>
                         <div class="back" >
@@ -48,7 +55,7 @@ function spreadCards(cardsArray) {
                 break;
             case 1:
                 cards.innerHTML+=`
-                <div class="card">
+                <div class="card" id="${info.id}" onclick='this.classList.toggle("flip");'>
                     <div class="content">
                         <div class="front"><img class="upside-down" src="${info.image}"/></div>
                         <div class="back" >

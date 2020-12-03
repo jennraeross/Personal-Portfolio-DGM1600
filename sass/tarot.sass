@@ -87,15 +87,40 @@ body
                 background-color: $primary-3
                 color: $dark-1
                 padding: 1em
-.card:hover
+
+.card.flip
     .content
         transform: rotateY(180deg)
 
 .hidden
-    display: none
+    display: none!important
 
 .upside-down
     transform: rotate(180deg)
+
+.modal
+    position: fixed /* Stay in place */
+    z-index: 3 /* Sit on top */
+    left: 0
+    top: 0
+    width: 100% /* Full width */
+    height: 100% /* Full height */
+    overflow: auto /* Enable scroll if needed */
+    background-color: $dark-4
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    .modal-content
+        z-index: 4 
+        background-color: $dark-2
+        max-width: 800px
+        min-width: 200px
+        padding: 1em
+        display: flex
+        flex-direction: column
+        justify-items: space-around
+        align-items: center
 
 @media only screen and (max-width: 600px) 
     .nav
