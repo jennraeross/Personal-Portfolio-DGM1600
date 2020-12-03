@@ -38,7 +38,9 @@ function drawCards(hand, deck, number) {
 
 //* Retrieves card data from API
 async function fetchCards() {
-    //const response = await fetch('https://tarot.howlcode.com/api/v1/cards');
+    //* Original API went down after I got it working,
+    //* so I switched to use a copy of the JSON data it gave.
+    ////const response = await fetch('https://tarot.howlcode.com/api/v1/cards');
     const response = await fetch('./js/tarot-cards.json');
     // watches for errors
     if (!response.ok) {
