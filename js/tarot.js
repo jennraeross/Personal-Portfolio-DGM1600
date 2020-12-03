@@ -4,7 +4,7 @@ const allButton     = document.querySelector("#allButton");
 const threeButton   = document.querySelector("#threeButton");
 const sevenButton   = document.querySelector("#sevenButton");
 
-// Array that will be filled with card objects.
+// Arrays that will be filled with card objects.
 let deck = [];
 let hand = [];
 
@@ -20,7 +20,7 @@ function displayCards(cardsArray) {
         cards.innerHTML +=`
             <div class="card">
                 <div class="content">
-                    <div class="front"><img src="${info.image}" /></div>
+                    <div class="front"><img src="${info.image}"/></div>
                     <div class="back" ><h3>${info.name}</h3><p>${info.summary}</p></div>
                 </div>
             </div>
@@ -28,11 +28,47 @@ function displayCards(cardsArray) {
     });
 }
 
+function spreadCards(cardsArray) {
+    clearCards();
+    cardsArray.forEach((info) => {
+        switch(Math.floor(Math.random() * 2)) {
+            case 0:
+                cards.innerHTML+=`
+                <div class="card">
+                    <div class="content">
+                        <div class="front"><img src="${info.image}"/></div>
+                        <div class="back" >
+                            <h3>${info.name}</h3>
+                            <p>Meaning: ${info.upright}</p>
+                            <p>Summary: ${info.summary}</p>
+                        </div>
+                    </div>
+                </div>
+                `;
+                break;
+            case 1:
+                cards.innerHTML+=`
+                <div class="card">
+                    <div class="content">
+                        <div class="front"><img class="upside-down" src="${info.image}"/></div>
+                        <div class="back" >
+                            <h3>${info.name}</h3>
+                            <h4>Reversed</h4>
+                            <p>Meaning: ${info.reversed}</p>
+                            <p>Summary: ${info.summary}</p>
+                        </div>
+                    </div>
+                </div>
+                `;
+        }
+    });
+}
+
 function drawCards(hand, deck, number) {
     for (var i = 0; i < number; i++) {
         hand.push(deck[Math.floor(Math.random() * deck.length)]);
     }
-    displayCards(hand);
+    spreadCards(hand);
     hand = [];
 }
 
