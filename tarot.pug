@@ -20,10 +20,40 @@ html(lang='en')
             .modal(onclick='this.classList.toggle("hidden");')
                 .modal-content
                     h3.
-                        This page displays the traditional Rider-Waite Tarot cards,
-                        some of which portray hand drawn artistic nudity. if such
-                        content offends you, please do not continue.
+                        This page displays the traditional Rider-Waite-Smith 
+                        Tarot cards, some of which portray hand drawn artistic
+                        nudity. if such content offends you, please do not
+                        continue.
                     p (Click anywhere to continue.)
+            #menu.modal
+                .modal-content
+                    h3 Create a Card:
+                    p (All fields should be filled for best experience.)
+                    form
+                        label(for="cardName") Name of Card:
+                        br
+                        input#cardName(type="text" name="cardName")
+                        br
+                        label(for="cardSummary") Summary of Card:
+                        br
+                        textarea#cardSummary
+                        br
+                        label(for="cardUpright") Meaning of Card when Upright:
+                        br
+                        input#cardUpright(type="text" name="cardUpright")
+                        br
+                        label(for="cardReversed") Meaning of Card when Reversed:
+                        br
+                        input#cardReversed(type="text" name="cardReversed")
+                        br
+                        label(for="cardImage") URL of Image for Card:
+                        br
+                        input#cardImage(type="text" name="cardImage")
+                        br
+                        .buttonrow
+                            button#cancelBtn Cancel
+                            button#submitBtn Submit
+                        
             .centerContainer
                 #summary
                     p.

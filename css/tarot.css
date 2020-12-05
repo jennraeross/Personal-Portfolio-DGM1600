@@ -25,7 +25,8 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-.nav .controls button {
+
+button {
   font-family: "Arvo", serif;
   margin-right: 1em;
   padding: 1.5em;
@@ -34,7 +35,8 @@ body {
   border-radius: 1em;
   border: 1px solid #ffffff;
 }
-.nav .controls button:hover {
+
+button:hover {
   color: #88c0d0;
   border: 1px solid #88c0d0;
 }
@@ -135,6 +137,73 @@ body {
   flex-direction: column;
   justify-items: space-around;
   align-items: center;
+}
+
+.buttonrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+textarea {
+  appearance: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  width: 100%;
+  height: 6em;
+  border: none;
+  background-color: #4c566a;
+  border: 1px solid #d8dee9;
+  color: white;
+  border-radius: 0.3em;
+}
+
+fieldset {
+  border-radius: 0.3em;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+  appearance: none;
+  outline: none;
+  height: 3em;
+  background-color: #4c566a;
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid #d8dee9;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+select {
+  height: 3.5em;
+  padding: 1em;
+  color: #ffffff;
+  background-color: #3b4252;
+  border: 1px solid #ffffff;
+  border-radius: 0.3em;
+  width: 100%;
+}
+
+input[type=submit] {
+  height: 3em;
+  padding: 1em;
+  color: #ffffff;
+  background-color: #3b4252;
+  border: 1px solid #ffffff;
+  border-radius: 0.3em;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: #2e3440;
 }
 
 @media only screen and (max-width: 600px) {

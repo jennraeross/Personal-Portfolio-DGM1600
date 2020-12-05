@@ -3,6 +3,8 @@ const cards         = document.querySelector("#cards");
 const allButton     = document.querySelector("#allButton");
 const threeButton   = document.querySelector("#threeButton");
 const sevenButton   = document.querySelector("#sevenButton");
+const submitButton   = document.querySelector("#submitBtn");
+const cancelButton   = document.querySelector("#cancelBtn");
 
 // Arrays that will be filled with card objects.
 let deck = [];
@@ -67,6 +69,7 @@ function spreadCards(cardsArray) {
                     </div>
                 </div>
                 `;
+                break;
         }
     });
 }
@@ -79,10 +82,16 @@ function drawCards(hand, deck, number) {
     hand = [];
 }
 
-//* Retrieves card data from API
+// Retrieves card data from API
 async function fetchCards() {
     //* Original API went down after I got it working,
     //* so I switched to use a copy of the JSON data it gave.
+    //* If you wanted to confirm it works, you could navigate
+    //* to the API URL (https://tarot.howlcode.com/api/v1/cards)
+    //* on chrome and enable access manually (it seems to be a
+    //* security certificate issue), but the data I'm using is an
+    //* identical copy, all I had to do was change where the fetch
+    //* was pointing to make it work again.
     ////const response = await fetch('https://tarot.howlcode.com/api/v1/cards');
     const response = await fetch('./js/tarot-cards.json');
     // watches for errors

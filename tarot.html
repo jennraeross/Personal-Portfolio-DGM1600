@@ -24,11 +24,34 @@
       <div class="modal" onclick="this.classList.toggle(&quot;hidden&quot;);">
         <div class="modal-content">
           <h3>
-            This page displays the traditional Rider-Waite Tarot cards,
-            some of which portray hand drawn artistic nudity. if such
-            content offends you, please do not continue.
+            This page displays the traditional Rider-Waite-Smith 
+            Tarot cards, some of which portray hand drawn artistic
+            nudity. if such content offends you, please do not
+            continue.
           </h3>
           <p>(Click anywhere to continue.)</p>
+        </div>
+      </div>
+      <div class="modal" id="menu">
+        <div class="modal-content">
+          <h3>Create a Card:</h3>
+          <p>(All fields should be filled for best experience.)</p>
+          <form>
+            <label for="cardName">Name of Card:</label><br>
+            <input id="cardName" type="text" name="cardName"><br>
+            <label for="cardSummary">Summary of Card:</label><br>
+            <textarea id="cardSummary"></textarea><br>
+            <label for="cardUpright">Meaning of Card when Upright:</label><br>
+            <input id="cardUpright" type="text" name="cardUpright"><br>
+            <label for="cardReversed">Meaning of Card when Reversed:</label><br>
+            <input id="cardReversed" type="text" name="cardReversed"><br>
+            <label for="cardImage">URL of Image for Card:</label><br>
+            <input id="cardImage" type="text" name="cardImage"><br>
+            <div class="buttonrow">
+              <button id="cancelBtn">Cancel</button>
+              <button id="submitBtn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
       <div class="centerContainer">

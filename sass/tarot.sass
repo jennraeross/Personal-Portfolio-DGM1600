@@ -23,17 +23,17 @@ body
         flex-direction: row
         justify-content: flex-end
         align-items: center
-        button
-            font-family: 'Arvo', serif
-            margin-right: 1em
-            padding: 1.5em
-            background-color: transparent
-            color: $light-1
-            border-radius: 1em
-            border: 1px solid $light-1
-        button:hover
-            color: $primary-1
-            border: 1px solid $primary-1
+button
+    font-family: 'Arvo', serif
+    margin-right: 1em
+    padding: 1.5em
+    background-color: transparent
+    color: $light-1
+    border-radius: 1em
+    border: 1px solid $light-1
+button:hover
+    color: $primary-1
+    border: 1px solid $primary-1
 
 #summary
     background-color: $dark-2
@@ -121,6 +121,66 @@ body
         flex-direction: column
         justify-items: space-around
         align-items: center
+.buttonrow
+    width: 100%
+    display: flex
+    justify-content: space-around
+
+textarea
+    appearance: none
+    outline: none
+    resize: none
+    overflow: auto
+    width: 100%
+    height: 6em
+    border: none
+    background-color: $dark-4
+    border: 1px solid $light-4
+    //padding-left: .5em
+    color: white
+    border-radius: .3em
+
+fieldset
+    border-radius: .3em
+
+input[type="text"],
+input[type="email"],
+input[type="tel"]
+    appearance: none
+    outline: none
+    //padding-left: .5em
+    height: 3em
+    background-color: $dark-4
+    color: white
+    border: none
+    border-radius: .3em
+    width: 100%
+    margin-bottom: 1em
+    border: 1px solid $light-4
+
+::placeholder
+    color: $light-1
+
+select
+    height: 3.5em
+    padding: 1em
+    color: $light-1
+    background-color: $dark-2
+    border: 1px solid $light-1
+    border-radius: .3em
+    width: 100%
+
+input[type="submit"]
+    height: 3em
+    padding: 1em
+    color: $light-1
+    background-color: $dark-2
+    border: 1px solid $light-1
+    border-radius: .3em
+    width: 100%
+
+input[type="submit"]:hover
+    background-color: $dark-1
 
 @media only screen and (max-width: 600px) 
     .nav
