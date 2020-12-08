@@ -1,10 +1,22 @@
 // Selects the div where cards will be shown
-const cards         = document.querySelector("#cards");
-const allButton     = document.querySelector("#allButton");
-const threeButton   = document.querySelector("#threeButton");
-const sevenButton   = document.querySelector("#sevenButton");
-const submitButton   = document.querySelector("#submitBtn");
-const cancelButton   = document.querySelector("#cancelBtn");
+const cards             = document.querySelector("#cards");
+const allButton         = document.querySelector("#allButton");
+const threeButton       = document.querySelector("#threeButton");
+const sevenButton       = document.querySelector("#sevenButton");
+const submitButton      = document.querySelector("#submitBtn");
+const cancelButton      = document.querySelector("#cancelBtn");
+const menu              = document.querySelector("#menu");
+const addButton         = document.querySelector("#addButton");
+const swordsButton      = document.querySelector("#swordsBtn");
+const cupsButton        = document.querySelector("#cupsBtn");
+const wandsButton       = document.querySelector("#wandsBtn");
+const pentaclesButton   = document.querySelector("#pentaclesBtn");
+const otherButton       = document.querySelector("#otherBtn");
+const cardName          = document.querySelector("#cardName");
+const cardSummary       = document.querySelector("#cardSummary");
+const cardUpright       = document.querySelector("#cardUpright");
+const cardReversed      = document.querySelector("#cardReversed");
+const cardImage         = document.querySelector("#cardImage");
 
 // Arrays that will be filled with card objects.
 let deck = [];
@@ -82,6 +94,42 @@ function drawCards(hand, deck, number) {
     hand = [];
 }
 
+function createCard(name, summary, upright, reversed, image, deck) {
+    let newObj = {
+        name:       name,
+        summary:    summary,
+        upright:    upright,
+        reversed:   reversed,
+        image:      image
+    };
+    deck.unshift(newObj);
+    displayCards(deck);
+}
+
+function checkSwords(deck) {
+    return deck.name.match(/swords/);
+}
+
+function checkCups(deck) {
+    return deck.name.match(/cups/);
+}
+
+function checkWands(deck) {
+    return deck.name.match(/wands/);
+}
+
+function checkPentacles(deck) {
+    return deck.name.match(/pentacles/);
+}
+
+function checkOther(deck) {
+    return !(
+        deck.name.match(/swords/) || 
+        deck.name.match(/cups/) || 
+        deck.name.match(/wands/) || 
+        deck.name.match(/pentacles/)
+    );
+}
 // Retrieves card data from API
 async function fetchCards() {
     //* Original API went down after I got it working,
@@ -126,8 +174,42 @@ fetchCards().then(cardsJSON => {
         drawCards(hand, deck, 7);
         hand = [];
     });
+    addButton.addEventListener("click", function() {
+        menu.classList.remove("hidden");
+    });
     allButton.addEventListener("click", function() {
         displayCards(deck);
-    })
+    });
+    cancelButton.addEventListener("click", function(){
+        menu.classList.add("hidden");
+    });
+    submitButton.addEventListener("click", function() {
+        console.log("submit button clicked!")
+        createCard(
+            cardName.value, 
+            cardSummary.value, 
+            cardUpright.value, 
+            cardReversed.value, 
+            cardImage.value, 
+            deck
+        );
+        menu.classList.add("hidden");
+    });
+    swordsButton.addEventListener("click", function() {
+        displayCards(deck.filter(checkSwords));
+    });
+    cupsButton.addEventListener("click", function() {
+        displayCards(deck.filter(checkCups));
+    });
+    wandsButton.addEventListener("click", function() {
+        displayCards(deck.filter(checkWands));
+    });
+    pentaclesButton.addEventListener("click", function() {
+        displayCards(deck.filter(checkPentacles));
+    });
+    otherButton.addEventListener("click", function() {
+        displayCards(deck.filter(checkOther));
+    });
+
 });
 

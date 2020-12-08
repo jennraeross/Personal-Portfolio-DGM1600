@@ -47,6 +47,7 @@ button:hover {
   min-width: 200px;
   padding: 1em;
   margin-top: 5em;
+  margin-bottom: 1em;
 }
 
 .centerContainer {
@@ -60,6 +61,7 @@ button:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 #cards .card {
   width: 300px;
@@ -140,9 +142,12 @@ button:hover {
 }
 
 .buttonrow {
-  width: 100%;
+  max-width: 800px;
+  min-width: 200px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 textarea {
@@ -225,6 +230,17 @@ input[type=submit]:hover {
     width: 95%;
     margin-right: 0;
     margin-bottom: 1em;
+  }
+
+  #cards {
+    flex-direction: column;
+  }
+
+  .buttonrow {
+    flex-direction: column;
+  }
+  .buttonrow button {
+    width: 100%;
   }
 }
 

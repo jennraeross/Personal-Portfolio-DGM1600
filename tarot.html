@@ -19,6 +19,7 @@
           <button id="allButton">  All Cards</button>
           <button id="threeButton">Spread 3</button>
           <button id="sevenButton">Spread 7</button>
+          <button id="addButton">Create Card</button>
         </div>
       </div>
       <div class="modal" onclick="this.classList.toggle(&quot;hidden&quot;);">
@@ -32,7 +33,7 @@
           <p>(Click anywhere to continue.)</p>
         </div>
       </div>
-      <div class="modal" id="menu">
+      <div class="modal hidden" id="menu">
         <div class="modal-content">
           <h3>Create a Card:</h3>
           <p>(All fields should be filled for best experience.)</p>
@@ -45,11 +46,11 @@
             <input id="cardUpright" type="text" name="cardUpright"><br>
             <label for="cardReversed">Meaning of Card when Reversed:</label><br>
             <input id="cardReversed" type="text" name="cardReversed"><br>
-            <label for="cardImage">URL of Image for Card:</label><br>
+            <label for="cardImage">URL of Image for Card (Portrait Orientation Recommended):</label><br>
             <input id="cardImage" type="text" name="cardImage"><br>
-            <div class="buttonrow">
-              <button id="cancelBtn">Cancel</button>
-              <button id="submitBtn">Submit</button>
+            <div class="buttonrow" id="suitButtons">
+              <button id="cancelBtn" type="button">Cancel</button>
+              <button id="submitBtn" type="button">Submit</button>
             </div>
           </form>
         </div>
@@ -68,6 +69,13 @@
             card representing a negative aspect of that which the card
             represents.
           </p>
+        </div>
+        <div class="buttonrow">
+          <button id="swordsBtn" type="button">Swords</button>
+          <button id="cupsBtn" type="button">Cups</button>
+          <button id="wandsBtn" type="button">Wands</button>
+          <button id="pentaclesBtn" type="button">Pentacles</button>
+          <button id="otherBtn" type="button">Other</button>
         </div>
       </div>
       <div id="cards"></div>
