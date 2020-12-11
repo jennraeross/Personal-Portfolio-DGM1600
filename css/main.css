@@ -18,12 +18,14 @@ a:visited, a {
 #navbar {
   background-color: #2e161d;
   width: 100%;
-  border-bottom: 1px solid #2e3440;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   margin: 0;
+  box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
 #navbar ul {
   display: flex;
