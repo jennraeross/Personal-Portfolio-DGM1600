@@ -26,10 +26,17 @@ a:visited, a {
   box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar h1 {
+  margin-left: 1em;
 }
 #navbar ul {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 #navbar ul li {
   display: inline;
@@ -123,9 +130,14 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+  }
   #navbar ul {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   #navbar ul li {
     margin-top: 1em;
