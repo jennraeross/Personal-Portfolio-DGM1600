@@ -125,8 +125,11 @@ a:visited, a {
 
 footer {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em;
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {
