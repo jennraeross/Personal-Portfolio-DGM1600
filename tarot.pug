@@ -54,7 +54,7 @@ html(lang='en')
                         #suitButtons.buttonrow
                             button#cancelBtn(type="button") Cancel
                             button#submitBtn(type="button") Submit
-                        
+
             .centerContainer
                 #summary
                     p.
@@ -63,10 +63,14 @@ html(lang='en')
                         about it's meaning.
                     p.
                         Tarot Cards are typically drawn at random, in a spread of
-                        a given number of cards. If a card is placed upside down,
+                        a given number of cards. If a card is placed upside down (called being 'reversed'),
                         this is considered in the fortune told, with an upside down
                         card representing a negative aspect of that which the card
                         represents.
+                    p.
+                        Click on a button below to sort the cards by suit, or click
+                        on one of the spread buttons above to have us lay out a reading
+                        for you.
                 .buttonrow
                     button#swordsBtn(type="button") Swords
                     button#cupsBtn(type="button") Cups
@@ -74,6 +78,7 @@ html(lang='en')
                     button#pentaclesBtn(type="button") Pentacles
                     button#otherBtn(type="button") Other
 
-            #cards
+            #card-container 
+                #cards
         footer
     script(type="module" src="js/tarot.js")

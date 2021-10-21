@@ -27,14 +27,16 @@ function createCards(wiki, data) {
                 console.log(number);
                 wiki.innerHTML += `
                     <div class="project-tile" id="episode-${entry.episode_id}">
-                        <h3>${entry.title}</h3>
-                        <img src="/img/films/${number}.jpg" onerror="this.style.display='none'" />
-                        <ul>
-                            <li>Episode:        ${entry.episode_id}</li>
-                            <li>Director:       ${entry.director}</li>
-                            <li>Producers:      ${entry.producer}</li>
-                            <li>Release Date:   ${entry.release_date}</li>
-                        </ul>
+                        <div class="tile-section"><h3>${entry.title}</h3></div>
+                        <div class="tile-section"><img src="/img/films/${number}.jpg" onerror="this.style.display='none'" /></div>
+                        <div class="tile-section">
+                            <ul>
+                                <li>Episode:        ${entry.episode_id}</li>
+                                <li>Director:       ${entry.director}</li>
+                                <li>Producers:      ${entry.producer}</li>
+                                <li>Release Date:   ${entry.release_date}</li>
+                            </ul>
+                        </div>
                     </div>`;
                 });
             break;
@@ -44,13 +46,15 @@ function createCards(wiki, data) {
                 console.log(number);
                 wiki.innerHTML += `
                     <div class="project-tile" id="person-${entry.name.replace(/\s/g, "")}">
-                        <h3>${entry.name}</h3>
-                        <img src="/img/characters/${number}.jpg" onerror="this.style.display='none'" />
-                        <ul>
-                            <li>Height:     ${entry.height}</li>
-                            <li>Birth Year: ${entry.birth_year}</li>
-                            <li>Gender:     ${entry.gender}</li>
-                        </ul>
+                        <div class="tile-section"><h3>${entry.name}</h3></div>
+                        <div class="tile-section"><img src="/img/characters/${number}.jpg" onerror="this.style.display='none'" /></div>
+                        <div class="tile-section">
+                            <ul>
+                                <li>Height:     ${entry.height}</li>
+                                <li>Birth Year: ${entry.birth_year}</li>
+                                <li>Gender:     ${entry.gender}</li>
+                            </ul>
+                        </div>
                     </div>`;
             });
             break;
@@ -60,13 +64,15 @@ function createCards(wiki, data) {
                 console.log(number);
                 wiki.innerHTML += `
                     <div class="project-tile" id="person-${entry.name.replace(/\s/g, "")}">
-                        <h3>${entry.name}</h3>
-                        <img src="/img/planets/${number}.jpg" onerror="this.style.display='none'" />
-                        <ul>
-                            <li>Diameter:   ${entry.diameter}</li>
-                            <li>Terrain:    ${entry.terrain}</li>
-                            <li>Population: ${entry.population}</li>
-                        </ul>
+                        <div class="tile-section"><h3>${entry.name}</h3></div>
+                        <div class="tile-section"><img src="/img/planets/${number}.jpg" onerror="this.style.display='none'" /></div>
+                        <div class="tile-section">
+                            <ul>
+                                <li>Diameter:   ${entry.diameter}</li>
+                                <li>Terrain:    ${entry.terrain}</li>
+                                <li>Population: ${entry.population}</li>
+                            </ul>
+                        </div>
                     </div>`;
             });
             break;
@@ -76,15 +82,17 @@ function createCards(wiki, data) {
                 console.log(number);
                 wiki.innerHTML += `
                     <div class="project-tile" id="person-${entry.name.replace(/\s/g, "")}">
-                        <h3>${entry.name}</h3>
-                        <img src="/img/species/${number}.jpg" onerror="this.style.display='none'" />
-                        <ul>
-                            <li>Classification:     ${entry.classification}</li>
-                            <li>Designation:        ${entry.designation}</li>
-                            <li>Skin Colors:        ${entry.skin_colors}</li>
-                            <li>Average Height:     ${entry.average_height}</li>
-                            <li>Average Lifespan:   ${entry.average_lifespan}</li>
-                        </ul>
+                        <div class="tile-section"><h3>${entry.name}</h3></div>
+                        <div class="tile-section"><img src="/img/species/${number}.jpg" onerror="this.style.display='none'" /></div>
+                        <div class="tile-section">
+                            <ul>
+                                <li>Classification:     ${entry.classification}</li>
+                                <li>Designation:        ${entry.designation}</li>
+                                <li>Skin Colors:        ${entry.skin_colors}</li>
+                                <li>Average Height:     ${entry.average_height}</li>
+                                <li>Average Lifespan:   ${entry.average_lifespan}</li>
+                            </ul>
+                        </div>
                     </div>`;
             });
             break;
@@ -94,17 +102,19 @@ function createCards(wiki, data) {
                 console.log(number);
                 wiki.innerHTML += `
                     <div class="project-tile" id="person-${entry.name.replace(/\s/g, "")}">
-                        <h3>${entry.name}</h3>
-                        <img src="/img/starships/${number}.jpg" onerror="this.style.display='none'" />
-                        <ul>
-                            <li>Manufacturer:       ${entry.manufacturer}</li>
-                            <li>Cost in Credits:    ${entry.cost_in_credits}</li>
-                            <li>Length:             ${entry.length}</li>
-                            <li>Crew:               ${entry.crew}</li>
-                            <li>Passengers:         ${entry.passengers}</li>
-                            <li>Hyperdrive Rating:  ${entry.hyperdrive_rating}</li>
-                            <li>Starship Class:     ${entry.starship_class}</li>
-                        </ul>
+                        <div class="tile-section"><h3>${entry.name}</h3></div>
+                        <div class="tile-section"><img src="/img/starships/${number}.jpg" onerror="this.style.display='none'" /></div>
+                        <div class="tile-section">
+                            <ul>
+                                <li>Manufacturer:       ${entry.manufacturer}</li>
+                                <li>Cost in Credits:    ${entry.cost_in_credits}</li>
+                                <li>Length:             ${entry.length}</li>
+                                <li>Crew:               ${entry.crew}</li>
+                                <li>Passengers:         ${entry.passengers}</li>
+                                <li>Hyperdrive Rating:  ${entry.hyperdrive_rating}</li>
+                                <li>Starship Class:     ${entry.starship_class}</li>
+                            </ul>
+                        </div>
                     </div>`;
             });
             break;
@@ -114,17 +124,19 @@ function createCards(wiki, data) {
                 console.log(number);
                 wiki.innerHTML += `
                     <div class="project-tile" id="person-${entry.name.replace(/\s/g, "")}">
-                        <h3>${entry.name}</h3>
-                        <img src="/img/vehicles/${number}.jpg" onerror="this.style.display='none'"/>
-                        <ul>
-                            <li>Manufacturer:       ${entry.manufacturer}</li>
-                            <li>Cost in Credits:    ${entry.cost_in_credits}</li>
-                            <li>Length:             ${entry.length}</li>
-                            <li>Crew:               ${entry.crew}</li>
-                            <li>Passengers:         ${entry.passengers}</li>
-                            <li>Max Speed:          ${entry.max_atmosphering_speed}</li>
-                            <li>Vehicle Class:      ${entry.vehicle_class}</li>
-                        </ul>
+                        <div class="tile-section"><h3>${entry.name}</h3></div>
+                        <div class="tile-section"><img src="/img/vehicles/${number}.jpg" onerror="this.style.display='none'"/></div>
+                        <div class="tile-section">
+                            <ul>
+                                <li>Manufacturer:       ${entry.manufacturer}</li>
+                                <li>Cost in Credits:    ${entry.cost_in_credits}</li>
+                                <li>Length:             ${entry.length}</li>
+                                <li>Crew:               ${entry.crew}</li>
+                                <li>Passengers:         ${entry.passengers}</li>
+                                <li>Max Speed:          ${entry.max_atmosphering_speed}</li>
+                                <li>Vehicle Class:      ${entry.vehicle_class}</li>
+                            </ul>
+                        </div>
                     </div>`;
             });
             break;

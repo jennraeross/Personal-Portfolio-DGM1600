@@ -1,5 +1,10 @@
+@import nord.sass
+body
+    background-color: $light-4
 h1 
     margin: 1em
+    margin-top: 2em
+    text-align: center
 #divider
     height: 2em
 #navbar
@@ -8,18 +13,25 @@ h1
 .hidden
     display: none
 .button
-    border: 1px solid #2e3440
+    border: 1px solid $dark-1
     padding: .75em
     margin: .5em
     border-radius: 5px
-    background-color: #f39933
-    color: #2e3440
+    background-color: $dark-2
+    color: $light-1
 .button:hover
-    background-color: #ab4f01
-    color: #ffffff
+    background-color: $dark-4
+    color: $light-1
 .button.active
-    background-color: #ab4f01
-    color:  #ffffff
+    background-color: $dark-4
+    color:  $light-1
 .project-tile
     width: 80vw
     justify-content: space-between
+
+@media only screen and (min-width: 601px)
+    .project-tile
+        .tile-section
+            width: 25vw
+            display: flex
+            justify-content: center

@@ -1,5 +1,11 @@
+body {
+  background-color: #d8dee9;
+}
+
 h1 {
   margin: 1em;
+  margin-top: 2em;
+  text-align: center;
 }
 
 #divider {
@@ -20,23 +26,31 @@ h1 {
   padding: 0.75em;
   margin: 0.5em;
   border-radius: 5px;
-  background-color: #f39933;
-  color: #2e3440;
+  background-color: #3b4252;
+  color: #ffffff;
 }
 
 .button:hover {
-  background-color: #ab4f01;
+  background-color: #4c566a;
   color: #ffffff;
 }
 
 .button.active {
-  background-color: #ab4f01;
+  background-color: #4c566a;
   color: #ffffff;
 }
 
 .project-tile {
   width: 80vw;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 601px) {
+  .project-tile .tile-section {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=swapi.css.map */
